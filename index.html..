@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<style>
+
+body{
+font-family: Arial;
+background:#0f172a;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.box{
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+width:280px;
+text-align:center;
+color:white;
+}
+
+input{
+width:90%;
+padding:10px;
+margin:8px;
+border-radius:8px;
+border:none;
+}
+
+button{
+width:95%;
+padding:10px;
+border:none;
+border-radius:20px;
+background:linear-gradient(to right,blue,pink);
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+#msg{
+margin-top:10px;
+font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Login</h2>
+
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p id="msg"></p>
+
+</div>
+
+<script>
+
+function login(){
+
+var user=document.getElementById("username").value;
+var pass=document.getElementById("password").value;
+
+if(user=="admin" && pass=="1234")
+{
+document.getElementById("msg").innerHTML="Login Successful ✅";
+}
+else
+{
+document.getElementById("msg").innerHTML="Wrong Username or Password ❌";
+}
+
+}
+
+</script>
+
+</body>
+</html>
