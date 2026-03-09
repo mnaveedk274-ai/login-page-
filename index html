@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Subjects</title>
+
+<style>
+
+body{
+font-family: Arial;
+background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+text-align:center;
+}
+
+.container{
+width:90%;
+max-width:400px;
+margin:auto;
+margin-top:40px;
+background:#2d3142;
+padding:20px;
+border-radius:15px;
+}
+
+input{
+width:90%;
+padding:12px;
+margin:10px;
+border-radius:10px;
+border:none;
+}
+
+button{
+padding:12px 30px;
+border:none;
+border-radius:20px;
+background:linear-gradient(90deg,#1e90ff,#ff6a6a);
+color:white;
+font-size:16px;
+}
+
+.subject{
+margin-top:20px;
+padding:20px;
+border-radius:15px;
+background:linear-gradient(90deg,#1e90ff,#7b2ff7);
+}
+
+.theme{
+margin:10px;
+padding:10px 20px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:30px;
+text-decoration:none;
+}
+
+</style>
+
+<script>
+
+function login(){
+var user=document.getElementById("user").value;
+var pass=document.getElementById("pass").value;
+
+if(user=="MET-1" && pass=="123"){
+document.getElementById("subjects").style.display="block";
+document.getElementById("loginbox").style.display="none";
+}
+else{
+alert("Wrong Login");
+}
+}
+
+function dark(){
+document.body.style.background="black";
+}
+
+function light(){
+document.body.style.background="white";
+document.body.style.color="black";
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Student Portal</h2>
+
+<button class="theme" onclick="dark()">Dark Theme</button>
+<button class="theme" onclick="light()">Light Theme</button>
+
+<div class="container" id="loginbox">
+
+<h2>Login</h2>
+
+<input type="text" id="user" placeholder="Username">
+
+<input type="password" id="pass" placeholder="Password">
+
+<br>
+
+<button onclick="login()">Login</button>
+
+</div>
+
+<div class="container" id="subjects" style="display:none">
+
+<h2>Subjects</h2>
+
+<div class="subject">Industrial Management</div>
+
+<div class="subject">Applied Mechanics</div>
+
+<div class="subject">Technical Drawing</div>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/923000000000">Contact Admin</a>
+
+</body>
+</html>
